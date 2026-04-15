@@ -1,0 +1,23 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: demo
+
+  r2dbc:
+    url: r2dbc:postgresql://ep-jolly-smoke-anvisuxe-pooler.c-6.us-east-1.aws.neon.tech/neondb?sslMode=require
+    username: neondb_owner
+    password: npg_fAq1Q3sWmiFl
+
+    pool:
+      enabled: true
+      initial-size: 5
+      max-size: 20
+
+rapidapi:
+  image-generator:
+    base-url: https://ai-text-to-image-generator-flux-free-api.p.rapidapi.com
+    quick-path: /aaaaaaaaaaaaaaaaaiimagegenerator/quick.php
+    host: ai-text-to-image-generator-flux-free-api.p.rapidapi.com
+    api-key: 5d9117630fmsh219f0e2962d20e4p135537jsnfc0b2ca2bf66
