@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edy-beingolea-00-deployment
+  namespace: edy-beingolea-00-namespace
+spec:
+  selector:
+    matchLabels:
+      app: edy-beingolea-00-deployment
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: edy-beingolea-00-deployment
+    spec:
+      containers:
+        - name: edy-beingolea-00-container
+          image: ballenitatransportadora/container-backend-demo:latest
+          imagePullPolicy: IfNotPresent
+          envFrom:
+            - secretRef:
+                name: edy-beingolea-00-secret

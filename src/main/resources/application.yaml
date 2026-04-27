@@ -6,9 +6,9 @@ spring:
     name: demo
 
   r2dbc:
-    url: r2dbc:postgresql://ep-jolly-smoke-anvisuxe-pooler.c-6.us-east-1.aws.neon.tech/neondb?sslMode=require
-    username: neondb_owner
-    password: npg_fAq1Q3sWmiFl
+    url: ${DATABASE_URL}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
 
     pool:
       enabled: true
@@ -17,7 +17,10 @@ spring:
 
 rapidapi:
   image-generator:
-    base-url: https://ai-text-to-image-generator-flux-free-api.p.rapidapi.com
-    quick-path: /aaaaaaaaaaaaaaaaaiimagegenerator/quick.php
-    host: ai-text-to-image-generator-flux-free-api.p.rapidapi.com
-    api-key: 5d9117630fmsh219f0e2962d20e4p135537jsnfc0b2ca2bf66
+    base-url: ${RAPIAPI_URL}
+    quick-path: ${RAPIAPI_QUICK_PAHT}
+    host: ${RAPIAPI_HOST}
+    api-key: ${RAPIAPI_API_KEY}
+	
+	
+	
