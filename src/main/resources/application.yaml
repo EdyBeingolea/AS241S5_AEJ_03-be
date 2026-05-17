@@ -6,9 +6,9 @@ spring:
     name: demo
 
   r2dbc:
-    url: ${DATABASE_URL}
-    username: ${DATABASE_USERNAME}
-    password: ${DATABASE_PASSWORD}
+    url: ${DATABASE_URL:r2dbc:postgresql://db.wsxezwtuibumiljciook.supabase.co:5432/postgres}
+    username: ${DATABASE_USERNAME:postgres}
+    password: ${DATABASE_PASSWORD:GeneracionImagen}
 
     pool:
       enabled: true
@@ -17,10 +17,7 @@ spring:
 
 rapidapi:
   image-generator:
-    base-url: ${RAPIAPI_URL}
-    quick-path: ${RAPIAPI_QUICK_PAHT}
-    host: ${RAPIAPI_HOST}
-    api-key: ${RAPIAPI_API_KEY}
-	
-	
-	
+    base-url: ${RAPIDAPI_URL:https://ai-text-to-image-generator-flux-free-api.p.rapidapi.com}
+    quick-path: ${RAPIDAPI_QUICK_PATH:/aaaaaaaaaaaaaaaaaiimagegenerator/quick.php}
+    host: ${RAPIDAPI_HOST:ai-text-to-image-generator-flux-free-api.p.rapidapi.com}
+    api-key: ${RAPIDAPI_API_KEY:5d9117630fmsh219f0e2962d20e4p135537jsnfc0b2ca2bf66}

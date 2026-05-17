@@ -5,26 +5,24 @@ import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
-@Table("usuario")
-public class Usuario {
+@SuperBuilder
+@Table("usuarios")
+public class Usuario extends ApiEntity {
 
     @Id
     @Column("id")
     private Integer id;
-    @Column("name")
-    private String nombre;
-    @Column("paternal_surname")
-    private String apellidoPaterno;
-    @Column("maternal_surname")
-    private String apellidoMaterno;
-    @Column("status")
+    @Column("nombre_usuario")
+    private String username;
+    @Column("password_hash")
+    private String password;
+    @Column("estado")
     private String estado;
 }

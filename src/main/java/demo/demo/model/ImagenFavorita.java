@@ -13,16 +13,16 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 @AllArgsConstructor
 @SuperBuilder
-@Table("imagenes_generadas")
-public class Imagen extends ApiEntity {
+@Table("imagenes_favoritas")
+public class ImagenFavorita extends ApiEntity {
 
     @Id
     @Column("id")
     private Integer id;
-    @Column("nombre_archivo")
-    private String nombreArchivo;
-    @Column("promt")
-    private String promt;
+    @Column("imagen_favorito")
+    private String favorita;
+    @Column("id_imagen")
+    private Integer idImagen;
     @Column("id_usuario")
     private Integer idUsuario;
 }

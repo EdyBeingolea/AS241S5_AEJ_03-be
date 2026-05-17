@@ -9,11 +9,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class UsuarioResponse {
+public class ImagenGeneradaItemResponse {
 
-    private Integer id;
-    private String username;
-    private String password;
-    private String estado;
-    private String usuario;
+    private Integer index;
+    private Boolean nsfw;
+    private String origin;
+    private String thumb;
 }
